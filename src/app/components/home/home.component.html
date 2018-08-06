@@ -1,0 +1,142 @@
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+
+<!-- Navbar -->
+<div id="nav-bar">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span>AngularTest</span>
+      <span class="example-spacer"></span>
+      <button mat-button routerLink="/login">LOG IN</button>
+      <button mat-button routerLink="/register">REGISTER</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<!-- Main landing -->
+<div class="landing-page-section">
+  <section id="showcase"
+           fxLayout="column"
+           fxLayoutAlign="center start"
+           [ngStyle.lt-md]="{ 'height': '100vh' }">
+    <div class="landing-container">
+      <div class="content"
+           fxFlex.gt-sm="1 1 50%"
+           [ngStyle.xs]="{ 'text-align': 'center', 'padding': '5px' }">
+        <h1
+          [ngStyle.lt-lg]="{ 'font-size': '36px' }"
+          [ngStyle.lt-sm]="{ 'font-size': '28px' }">
+          Turn properties at a break neck pace</h1>
+        <p>End the frustration and imagine the endless possibilities as you seamlessly transition from sluggish, costly, time consuming workflows, to sleek, efficient, profitable ones.</p>
+        <div class="landing-button">
+          <a routerLink="/login" class="button-basic">Login</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feature-headline">
+    <div class="landing-container"
+         fxLayout="row"
+         fxLayoutAlign="space-around center">
+      <h1>MoneyFlip is a Real-Estate investment and Home Flipping collaboration network. Where brokers, investors and service providers collaborate to complete successful home flipping projects </h1>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="landing-container"
+         fxLayout="row"
+         fxLayout.lt-md="column"
+         fxLayoutAlign="space-around center">
+      <div class="blurb"
+           [ngStyle.lt-md]="{ 'width': '100%', 'height': '200px' }"
+           [ngStyle.lt-sm]="{ 'width': '100%', 'height': '375px' }">
+        <div>
+          <i class="material-icons md-72">group</i>
+        </div>
+        <h3>Stay Connected</h3>
+        <p [ngStyle.lt-lg]="{ 'padding': '5px' }">With an intuitive dashboard, service providers can easily interact with their service consumers using administration and member user access.</p>
+      </div>
+      <div class="blurb"
+           [ngStyle.lt-md]="{ 'width': '100%', 'height': '225px'  }"
+           [ngStyle.lt-sm]="{ 'width': '100%', 'height': '375px' }">
+        <div>
+          <i class="material-icons md-72">phone_iphone</i>
+        </div>
+        <h3>Mobile Ready</h3>
+        <p [ngStyle.lt-lg]="{ 'padding': '5px' }">Mobile ready design allows you to manage your business anywhere on any device without sacrificing function or loss of features.</p>
+      </div>
+      <div class="blurb"
+           [ngStyle.lt-md]="{ 'width': '100%', 'height': '225px'  }"
+           [ngStyle.lt-sm]="{ 'width': '100%', 'height': '375px' }">
+        <div>
+          <i class="material-icons md-72">assignment</i>
+        </div>
+        <h3>Customizable</h3>
+        <p [ngStyle.lt-lg]="{ 'padding': '5px' }">Edit you profile, view reports, message members, manage permissions, create organizations and add communities that members can join all in one place.</p>
+      </div>
+      <div class="blurb"
+           [ngStyle.lt-md]="{ 'width': '100%', 'height': '225px'  }"
+           [ngStyle.lt-sm]="{ 'width': '100%', 'height': '375px' }">
+        <div>
+          <i class="material-icons md-72">place</i>
+        </div>
+        <h3>API Intergration</h3>
+        <p [ngStyle.lt-lg]="{ 'padding': '5px' }">Take your workflow to the next level by adding maps, payment portals, plus many more features with dynamic data and API intergration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reactiveseed-info">
+    <div class="landing-container"
+         fxLayout="row"
+         fxLayout.lt-md="column"
+         fxLayoutAlign="space-around center">
+      <div class="two-column"
+           [ngStyle.lt-md]="{ 'width': '100%', 'text-align': 'center' }">
+        <h2>Built from the ground up to save you time and money</h2>
+        <p>MoneyFlip is built on our ReactiveSeed.io framework. ReactiveSeed is a Multi-user, Multi-tenant, and Multi-tier collaboration network Web Application Framework. This framework is built on top of innovative, cutting-edge, open-source technologies such as the Lightbend supported Play Framework, and Angular 5.</p>
+      </div>
+      <div id="time-money-image" class="two-column"
+           [ngStyle.lt-md]="{ 'width': '100%', 'text-align': 'center' }">
+        <img src="http://via.placeholder.com/250x150"
+             [ngStyle.lt-sm]="{ 'height': '215px' }">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-us">
+    <div class="landing-container"
+         fxLayout="column"
+         fxLayoutAlign="space-around center">
+      <div class="contact-us-content">
+        <h2>Get started now with a hands on preview of MoneyFlip, or contact us today for your free registry key and instructions on how to get started.</h2>
+      </div>
+    </div>
+    <div class="landing-container"
+         fxLayout="row"
+         fxLayout.lt-md="column">
+      <div class="two-column"
+           fxLayoutAlign="end center"
+           fxLayoutAlign.lt-md="center center"
+           [ngStyle.lt-md]="{ 'width': '100%', 'text-align': 'center' }">
+        <a routerLink="/login" class="button-basic">Login Now</a>
+      </div>
+      <div class="two-column"
+           fxLayoutAlign="start center"
+           fxLayoutAlign.lt-md="center center"
+           [ngStyle.lt-md]="{ 'width': '100%', 'text-align': 'center' }">
+        <a routerLink="/register" class="button-basic">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="landing-container">
+      <p>© 2018 Jessica Mitchell.io</p>
+    </div>
+  </section>
+
+</div>

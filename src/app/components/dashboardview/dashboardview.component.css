@@ -1,0 +1,10 @@
+#message-card mat-card {
+    border-left: 10px solid #707f87;
+    width: auto;
+  }
+  
+  #message-card {
+    padding: 25px;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,56 @@
+<div *ngIf="!loading"
+     id="login-view"
+     fxLayout="column"
+     fxLayoutAlign="center center"
+     [ngStyle.lt-md]="{ 'padding': '10px' }">
+  <h1>Log in</h1>
+
+  <section id="login-container"
+           [ngStyle.lt-sm]="{ 'width': '100%' }"
+           [ngStyle.lt-md]="{ 'width': '75%' }">
+    <div class="login-card"
+         fxFlex.gt-md="1 1 34%"
+         fxFlex.lt-lg="1 1 100%">
+      <mat-card>
+        <mat-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit(loginForm.value)">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="User ID" formControlName="userId" required autofocus>
+              <mat-error class="error" *ngIf="!loginForm.controls['userId'].valid && loginForm.controls['userId'].touched">User ID is required</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Password" formControlName="password" required>
+              <mat-error class="error" *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Password is required</mat-error>
+            </mat-form-field>
+            <input type="submit" value="Login" class="button-blue" [disabled]="!loginForm.valid">
+          </form>
+        </mat-card-content>
+        <br>
+        <p>New User? <a routerLink="/register" class="link">Register Now</a></p>
+        <br>
+        <div>
+          <a routerLink="/home" class="button-blue">Return to Homepage</a>
+        </div>
+      </mat-card>
+    </div>
+    <div class="information-card"
+         fxFlex.gt-md="1 1 66%"
+         fxShow fxHide.lt-lg>
+      <mat-card>
+        <h1>Get Started</h1>
+        <p>Getting started is easy, just follow the directions listed below.</p>
+        <br>
+          <p>1. Enter your userId and password in the fields provided.</p>
+          <p>2. Don't have a password or userId? Don't forget to register<a routerLink="/register" class="link"> here</a>.</p>
+      </mat-card>
+    </div>
+  </section>
+  <div>
+    <p><a routerLink="/" class="link">Return to Homepage</a></p>
+  </div>
+</div>
+
+<div *ngIf="loading">
+  <h1>Loading...</h1>
+</div>

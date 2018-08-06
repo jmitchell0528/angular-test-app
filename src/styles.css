@@ -1,1 +1,150 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/*Global*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body  {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue",
+  Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-justify: inter-word;
+}
+
+a {
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+.top-bottom-spacer  {
+  padding: 15px 0px;
+}
+
+/*Dashboard container settings*/
+
+.dashboard-container .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 15px 0px;
+}
+
+.dashboardnav-spacer {
+  flex: 1 1 auto;
+}
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 580px) and (min-width: 320px)
+
+{
+  .dashboard-container .container  {
+    width: 98%;
+  }
+}
+
+/*Basic white button*/
+.button-basic, input.button-basic{
+  text-decoration: none;
+  color: #ffffff;
+  border: #ffffff 2px solid;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.button-basic:hover:enabled, input.button-basic:hover:enabled {
+  background: #ffffff;
+  color: #3f51b5;
+}
+
+.button-basic:disabled  {
+  color: #ffffff;
+  border: #ffffff 2px solid;
+  cursor: not-allowed;
+}
+
+/*Secondary blue button*/
+.button-blue, input.button-blue {
+  text-decoration: none;
+  color: #3f51b5;
+  border: #3f51b5 2px solid;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button-blue:hover:enabled, input.button-blue:hover:enabled  {
+  background: #3f51b5;
+  color: #ffffff;
+}
+
+.button-blue:disabled {
+  color: #3f51b5;
+  border: #3f51b5 2px solid;
+  cursor: not-allowed;
+}
+
+.button-blue:disabled:hover, .button-basic:disabled:hover {
+  color: #a9a9a9;
+  border: #a9a9a9 2px solid;
+}
+
+/*Material icon sizes*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-60 { font-size: 60px; }
+.material-icons.md-72 { font-size: 72px; }
+
+div.searchBar {
+  padding: 15px;
+}
+
+/*Errors on forms*/
+
+.error  {
+  color: red;
+  font-size: .9em;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: 1s alertAnim forwards;
+}
+
+.required:after {
+  color: #d00;
+  content: "*";
+  position: absolute;
+}
+
+@keyframes alertAnim {
+  from {
+    opacity:0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}

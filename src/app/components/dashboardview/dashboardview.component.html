@@ -1,0 +1,49 @@
+<section id="message-card"
+  [ngStyle.lt-md]="{ 'padding': '10px' }">
+  <mat-card>
+    <mat-list>
+      <h3 mat-subheader>Recent messages</h3>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>@Bob_member</h3>
+        <p matLine>
+          <span>Checking in</span>
+          <span> -- Hey just checking in to make sure everything is good!</span>
+        </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>@Jane_member</h3>
+        <p matLine>
+          <span>Reports are due</span>
+          <span> -- The client is asking for the financial reports, they have a deadline for tomorrow.</span>
+        </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>@Bob_member</h3>
+        <p matLine>
+          <span>RE: Checking in</span>
+          <span> -- The reports Jane requested are ready. Just stop by my office later to pick them up.</span>
+        </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>@Sara_member</h3>
+        <p matLine>
+          <span>Customer reports</span>
+          <span> -- Bob completed the reports that the customer requested, is there a way I can get a copy once you pick them up?</span>
+        </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <br>
+      <div class="space-padding">
+        <a class="link">View All Messages</a>
+      </div>
+    </mat-list>
+  </mat-card>
+</section>

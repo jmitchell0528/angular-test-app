@@ -1,0 +1,75 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <a routerLink="/">
+      <span>AngularTest</span>
+    </a>
+
+    <span class="dashboardnav-spacer"></span>
+
+    <button
+      fxShow fxHide.xs
+      mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon> Profile</button>
+    <button
+      fxHide fxShow.xs
+      mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <mat-list>
+        <mat-list-item>
+          <img matListAvatar src="/assets/images/logo placeholder [Converted].png" alt="...">
+          <h2 matLine> {{ firstName }} {{ lastName }} </h2>
+          <p matLine>
+            <span> {{ email }} </span>
+          </p>
+          <p matLine>
+            <span> {{ description }} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+      <mat-divider></mat-divider>
+      <button mat-menu-item routerLink="/">
+        <mat-icon>person</mat-icon>
+        <span>View Profile</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="onLogout()">
+        <mat-icon> power_settings_new </mat-icon>
+        <span> Logout </span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <mat-list-item (click)="snav.toggle()">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <a routerLink="/"><h5 mat-line>Dashboard Home</h5></a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="snav.toggle()">
+          <mat-icon mat-list-icon>account_circle</mat-icon>
+          <a routerLink="/"><h5 mat-line>User Profile</h5></a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="snav.toggle()">
+          <mat-icon mat-list-icon>contacts</mat-icon>
+          <a routerLink="/"><h5 mat-line>Edit Profile</h5></a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="snav.toggle()">
+          <mat-icon mat-list-icon>assignments</mat-icon>
+          <a routerLink="/"><h5 mat-line>Log Reports</h5></a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="dashboard-container">
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

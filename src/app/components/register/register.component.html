@@ -1,0 +1,46 @@
+<div id="register-view"
+         fxLayout="column"
+         fxLayoutAlign="center center"
+         [ngStyle.lt-md]="{ 'padding': '10px' }">
+  <h1>Register</h1>
+
+  <section id="register-card">
+    <mat-card>
+      <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value, true)">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="First Name" formControlName="firstName" required autofocus>
+          <mat-error class="error" *ngIf="!registerForm.controls['firstName'].valid && registerForm.controls['firstName'].touched">First name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName" required>
+          <mat-error class="error" *ngIf="!registerForm.controls['lastName'].valid && registerForm.controls['lastName'].touched">Last name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" formControlName="email" required>
+          <mat-error class="error" *ngIf="!registerForm.controls['email'].valid && registerForm.controls['email'].touched">A valid email is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">A password of at least 6 characters is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="Register Key" formControlName="registerKey" required>
+          <mat-error class="error" *ngIf="!registerForm.controls['registerKey'].valid && registerForm.controls['registerKey'].touched">Register Key is required</mat-error>
+          <mat-error class="error" *ngIf="registerKeyError">Register key is invalid</mat-error>
+        </mat-form-field>
+        <div
+          fxLayout="row"
+          fxLayout.xs="column"
+          fxLayoutAlign="space-evenly center">
+          <label>Are you an Administrator?</label>
+          <mat-checkbox formControlName="admin">Yes</mat-checkbox>
+        </div>
+        <br>
+        <input type="submit" value="Register" class="button-blue" [disabled]="!registerForm.valid">
+      </form>
+    </mat-card>
+  </section>
+  <div id="register-home">
+    <p><a routerLink="/" class="link">Return to Homepage</a></p>
+  </div>
+</div>

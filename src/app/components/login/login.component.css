@@ -1,0 +1,34 @@
+#login-view {
+    background-color: #f8f8f8;
+    padding: 25px;
+    line-height: 1.5;
+    height: 100vh;
+  }
+  
+  #login-container  {
+    padding: 50px 0px;
+    width: 50%;
+  }
+  
+  .login-card  mat-card, .information-card mat-card {
+    height: 400px;
+  }
+  
+  .login-card {
+    min-width: 275px;
+    max-width: 300px;
+  }
+  
+  .login-card .full-width {
+    width: 100%;
+  }
+  
+  .login-card {
+    text-align: center;
+  }
+  
+  .information-card h1, h2, p {
+    line-height: 1.5;
+    padding: 10px 5px;
+  }
+  

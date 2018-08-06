@@ -1,0 +1,23 @@
+/*Register card*/
+
+#register-view {
+    background-color: #f8f8f8;
+    padding: 25px;
+    line-height: 1.5;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  #register-card  {
+    padding: 25px 0px;
+  }
+  
+  #register-card mat-card  {
+    min-width: 250px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  #register-view .full-width {
+    width: 100%;
+  }

@@ -1,0 +1,114 @@
+/* Navebar */
+
+mat-toolbar {
+    position: absolute;
+    z-index: 5;
+    background-color: #3f51b5;
+    color: #ffffff;
+  }
+  
+  mat-toolbar-row img {
+    margin-top: 8px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  /*!*global for landing page*!*/
+
+.landing-page-section h1, h2, h3, h4, p {
+    line-height: 1.5;
+    padding: 15px 25px;
+  }
+  
+  .landing-container  {
+    width: 88%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .landing-button  {
+    padding: 15px 25px;
+  }
+  
+  #showcase {
+    background: url('/assets/images/pexel-material-showcase.jpeg') no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 65vh;
+  }
+  
+  #showcase .content {
+    color: #ffffff;
+  }
+  
+  #showcase .content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  
+  #feature-headline {
+    padding: 35px 25px;
+    text-align: center;
+  }
+  
+  #features {
+    padding: 35px 25px;
+  }
+  
+  #features .blurb  {
+    padding: 15px;
+    text-align: center;
+    width: 25%;
+    height: 350px;
+  }
+  
+  #features .blurb .material-icons  {
+    color: #3f51b5;
+  }
+  
+  #reactiveseed-info  {
+    background-color: #ebebeb;
+    padding: 75px 25px;
+  }
+  
+  #reactiveseed-info .two-column, #contact-us .two-column {
+    padding: 25px;
+    width: 50%;
+  }
+  
+  #time-money-image.two-column  {
+    text-align: center;
+  }
+  
+  #time-money-image.two-column img {
+    height: 350px;
+  }
+  
+  #contact-us {
+    background-color: #3f51b5;
+    padding: 35px 25px;
+    color: #ffffff;
+  }
+  
+  #contact-us .landing-container {
+    padding: 5px;
+  }
+  
+  #contact-us .contact-us-content {
+    text-align: center;
+  }
+  
+  #footer .landing-container  {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  @media screen and (max-width: 768px) and (min-width: 320px)
+  
+  {
+    .landing-container  {
+      width: 98%;
+    }
+  }
